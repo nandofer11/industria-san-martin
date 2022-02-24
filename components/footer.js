@@ -39,9 +39,9 @@ export default function Footer() {
                         <img className="w-36" src="./img/logo-blanco.png" alt="logotipo Industria Ladrillera San Martin" />
                         <div className='mt-5'>
                             <p className="inline mr-4">Síguenos en:</p>
-                            <a className="hover:text-gray-400" href="https://www.facebook.com/industriasanmartin" target='_blank' rel="noopener">{iFB}</a>
-                            <a className="hover:text-gray-400" href="https://www.facebook.com/industriasanmartin" target='_blank' rel="noopener">{iInsta}</a>
-                            <a className="hover:text-gray-400" href="https://www.facebook.com/industriasanmartin" target='_blank' rel="noopener">{iYouTube}</a>
+                            <a className="hover:text-gray-400" href="https://www.facebook.com/industriasanmartin" target='_blank' rel="noreferrer">{iFB}</a>
+                            <a className="hover:text-gray-400" href="https://www.facebook.com/industriasanmartin" target='_blank' rel="noreferrer">{iInsta}</a>
+                            <a className="hover:text-gray-400" href="https://www.facebook.com/industriasanmartin" target='_blank' rel="noreferrer">{iYouTube}</a>
                         </div>
                     </div>
                     <div data-aos='fade-down' data-aos-easing="ease" data-aos-delay="400" className='my-4'>
@@ -78,7 +78,7 @@ export default function Footer() {
                 <div className="flex flex-col md:flex-row text-center justify-between pt-2">
                     <p  className='text-sm mb-3'>Copyright © 2022 Industria Ladrillera San Martín | Todos los Derechos Reservados.</p>
                     <p className='text-sm italic'>Diseño y Desarrollo:
-                        <a className='hover:text-orangePrimary not-italic font-normal ml-2' href='https://walink.co/9b8263' target='_blank' rel="noopener"> {iWsp}O. Fernández</a>
+                        <a className='hover:text-orangePrimary not-italic font-normal ml-2' href='https://walink.co/9b8263' target='_blank' rel="noreferrer"> {iWsp}O. Fernández</a>
                     </p>
                 </div>
             </div>

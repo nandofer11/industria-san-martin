@@ -38,9 +38,9 @@ export default function Contacto() {
                 Rioja, San Martín (Entrada Tamboyacu).</p>
               <div className='mt-6'>
                 <p className="inline mr-4 text-orangePrimary font-bold italic">Síguenos en:</p>
-                <a className="hover:text-orangePrimary" href="https://www.facebook.com/industriasanmartin" target='_blank' rel="noopener">{iFB}</a>
-                <a className="hover:text-orangePrimary" href="https://www.facebook.com/industriasanmartin" target='_blank' rel="noopener">{iInsta}</a>
-                <a className="hover:text-orangePrimary" href="https://www.facebook.com/industriasanmartin" target='_blank' rel="noopener">{iYouTube}</a>
+                <a className="hover:text-orangePrimary" href="https://www.facebook.com/industriasanmartin" target='_blank' rel="noreferrer">{iFB}</a>
+                <a className="hover:text-orangePrimary" href="https://www.facebook.com/industriasanmartin" target='_blank' rel="noreferrer">{iInsta}</a>
+                <a className="hover:text-orangePrimary" href="https://www.facebook.com/industriasanmartin" target='_blank' rel="noreferrer">{iYouTube}</a>
               </div>
             </div>
             <div className='bg-orangePrimary p-6 bg-bgForm bg-no-repeat bg-cover'>

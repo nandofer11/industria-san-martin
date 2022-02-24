@@ -16,9 +16,9 @@ export default function TopBar() {
             <div className="container mx-auto flex justify-between sm:px-2">
                 <div>
                     <p className="inline mr-4">Síguenos en:</p>
-                    <a className="hover:text-gray-400" href="https://www.facebook.com/industriasanmartin" target='_blank' rel="noopener">{iFB}</a>
-                    <a className="hover:text-gray-400" href="https://www.facebook.com/industriasanmartin" target='_blank' rel="noopener">{iInsta}</a>
-                    <a className="hover:text-gray-400" href="https://www.facebook.com/industriasanmartin" target='_blank' rel="noopener">{iYouTube}</a>
+                    <a className="hover:text-gray-400" href="https://www.facebook.com/industriasanmartin" target='_blank' rel="noreferrer">{iFB}</a>
+                    <a className="hover:text-gray-400" href="https://www.facebook.com/industriasanmartin" target='_blank' rel="noreferrer">{iInsta}</a>
+                    <a className="hover:text-gray-400" href="https://www.facebook.com/industriasanmartin" target='_blank' rel="noreferrer">{iYouTube}</a>
                 </div>
                 <div className='flex'>
                     <p className="mr-3"><span className="text-orangePrimary">{iEnvelope}</span> industriasanmartin@gmail.com
