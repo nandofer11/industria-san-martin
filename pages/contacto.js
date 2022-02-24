@@ -163,7 +163,7 @@ export default function Contacto() {
                   <label htmlFor='mensaje' className='text-whitePrimary'>Mensaje:</label>
                   <textarea value={mensaje} onChange={(e)=>{setMensaje(e.target.value);}} name="mensaje" rows="6" placeholder='Escribe tu mensaje ... '></textarea>
                 </div>
-                <a href="" className='inline-block bg-blackPrimary py-2 px-4 text-whitePrimary mt-5'>{iPaperPlane} Enviar</a>
+                <button href="" className='inline-block bg-blackPrimary py-2 px-4 text-whitePrimary mt-5'>{iPaperPlane} Enviar</button>
               </form>
             </div>
           </div>
