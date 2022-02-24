@@ -61,26 +61,11 @@ export default function Navegacion() {
                                 </div>
                                 <div className="hidden sm:block">
                                     <div className="flex space-x-4">
-                                        {/* <Menu>
-                                            {navigation.map((item) => (
-                                                <Menu.Item>
-                                                    <MyLink key={item.name}
-                                                        href={item.href}
-                                                        className={classNames(
-                                                            router.pathname == item.href ? 'text-blackPrimary border-b-4 border-orangePrimary' : 'text-blackPrimary hover:bg-blackPrimary hover:text-whitePrimary',
-                                                            'px-2 py-2 text-sm font-medium'
-                                                        )}
-                                                        aria-current={item.current ? 'page' : undefined}>{item.name}
-                                                    </MyLink>
-
-                                                </Menu.Item>
-                                            ))}
-                                        </Menu> */}
                                         <AnimateSharedLayout>
                                             <Menu>
                                                 {navigation.map((item) => (
-                                                    <Menu.Item>
-                                                        <MyLink key={item.name}
+                                                    <Menu.Item key={item.name}>
+                                                        <MyLink 
                                                             href={item.href}
                                                             className={classNames(
                                                                 router.pathname == item.href ? 'text-orangePrimary' : 'text-blackPrimary hover:text-orangePrimary',
