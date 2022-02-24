@@ -40,7 +40,7 @@ export default function Contacto() {
 
     let isValidForm = handleValidation();
 
-    if(isValidForm){
+    if (isValidForm) {
       setButtonText("Enviando");
       const res = await fetch("/api/sendgrid", {
         body: JSON.stringify({
@@ -49,15 +49,13 @@ export default function Contacto() {
           asunto: asunto,
           telefono: telefono,
           ciudad: ciudad,
-          mensaje: mensaje,
+          mensaje:  mensaje,
         }),
         headers: {
           "Content-Type": "application/json",
         },
         method: "POST",
       });
-    } 
-      
 
       const { error } = await res.json();
       if (error) {
@@ -70,7 +68,8 @@ export default function Contacto() {
       setShowSuccessMessage(true);
       setShowFailureMessage(false);
       setButtonText("Enviar");
-    console.log(nombresCompleto, email, asunto, mensaje);
+    }
+    console.log(fullname, email, subject, message);
   };
 
   const handleValidation = () => {
