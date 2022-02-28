@@ -180,7 +180,7 @@ export default function Contacto() {
                     <p className="text-red-500">Mensaje no puede estar vacío.</p>
                   )}
                 </div>
-                <button type='submit' href="" className='inline-block bg-blackPrimary py-2 px-4 text-whitePrimary mt-5'>{iPaperPlane} {{ buttonText }}</button>
+                <button type='submit' href="" className='inline-block bg-blackPrimary py-2 px-4 text-whitePrimary mt-5'>{iPaperPlane} { buttonText }</button>
                 <div className="text-left">
                   {showSuccessMessage && (
                     <p className="text-green-500 font-semibold text-sm my-2">
