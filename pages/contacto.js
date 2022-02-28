@@ -14,7 +14,7 @@ const iEnvelope = <FontAwesomeIcon className='text-orangePrimary ' icon={faEnvel
 const iFB = <FontAwesomeIcon className="mr-2" icon={faFacebookSquare} />
 const iInsta = <FontAwesomeIcon className="mr-2" icon={faInstagram} />
 const iYouTube = <FontAwesomeIcon className="mr-2" icon={faYoutube} />
-const iPaperPlane = <FontAwesomeIcon icon={faPaperPlane}/>
+const iPaperPlane = <FontAwesomeIcon icon={faPaperPlane} />
 
 export default function Contacto() {
   //Estados para los campos del formulario contacto
@@ -49,7 +49,7 @@ export default function Contacto() {
           asunto: asunto,
           telefono: telefono,
           ciudad: ciudad,
-          mensaje:  mensaje,
+          mensaje: mensaje,
         }),
         headers: {
           "Content-Type": "application/json",
@@ -138,31 +138,61 @@ export default function Contacto() {
               <form className='' onSubmit={handleSubmit}>
                 <div className="flex flex-col mb-3">
                   <label htmlFor='nombresCompleto' className='text-whitePrimary'>Nombres y Apellidos:</label>
-                  <input value={nombresCompleto} onChange={(e)=>{setNombresCompleto(e.target.value);}} name='nombresCompleto' type="text" className="w-96 form-input" />
+                  <input value={nombresCompleto} onChange={(e) => { setNombresCompleto(e.target.value); }} name='nombresCompleto' type="text" className="w-96 form-input" />
+                  {errors?.nombresCompleto && (
+                    <p className="text-red-500">Nombres y apellidos no puede estar vacío.</p>
+                  )}
                 </div>
                 <div className="flex flex-col mb-3">
                   <label htmlFor='email' className='text-whitePrimary'>Correo electrónico:</label>
-                  <input value={email} onChange={(e)=>{setEmail(e.target.value);}} name='email' type="email" className="w-96" />
+                  <input value={email} onChange={(e) => { setEmail(e.target.value); }} name='email' type="email" className="w-96" />
+                  {errors?.email && (
+                    <p className="text-red-500">Email no puede estar vacío.</p>
+                  )}
                 </div>
                 <div className="flex flex-col mb-3">
                   <label htmlFor='asunto' className='text-whitePrimary'>Asunto:</label>
-                  <input value={asunto} onChange={(e)=>{setAsunto(e.target.value);}} name='asunto' type="text" className="w-96" />
+                  <input value={asunto} onChange={(e) => { setAsunto(e.target.value); }} name='asunto' type="text" className="w-96" />
+                  {errors?.asunto && (
+                    <p className="text-red-500">Asunto no puede estar vacío.</p>
+                  )}
                 </div>
                 <div className='flex'>
                   <div className="flex flex-col mb-3">
                     <label htmlFor='telefono' className='text-whitePrimary'>Teléfono:</label>
-                    <input value={telefono} onChange={(e)=>{setTelefono(e.target.value);}} name='telefono' type="tel" className="w-44 mr-8" />
+                    <input value={telefono} onChange={(e) => { setTelefono(e.target.value); }} name='telefono' type="tel" className="w-44 mr-8" />
+                    {errors?.telefono && (
+                      <p className="text-red-500">Teléfono no puede estar vacío.</p>
+                    )}
                   </div>
                   <div className="flex flex-col mb-3">
                     <label htmlFor='ciudad' className='text-whitePrimary'>Ciudad:</label>
-                    <input value={ciudad} onChange={(e)=>{setCiudad(e.target.value);}} name='ciudad' type="text" className="w-44" />
+                    <input value={ciudad} onChange={(e) => { setCiudad(e.target.value); }} name='ciudad' type="text" className="w-44" />
+                    {errors?.ciudad && (
+                      <p className="text-red-500">Ciudad no puede estar vacío.</p>
+                    )}
                   </div>
                 </div>
                 <div className="flex flex-col">
                   <label htmlFor='mensaje' className='text-whitePrimary'>Mensaje:</label>
-                  <textarea value={mensaje} onChange={(e)=>{setMensaje(e.target.value);}} name="mensaje" rows="6" placeholder='Escribe tu mensaje ... '></textarea>
+                  <textarea value={mensaje} onChange={(e) => { setMensaje(e.target.value); }} name="mensaje" rows="6" placeholder='Escribe tu mensaje ... '></textarea>
+                  {errors?.mensaje && (
+                    <p className="text-red-500">Mensaje no puede estar vacío.</p>
+                  )}
                 </div>
-                <button href="" className='inline-block bg-blackPrimary py-2 px-4 text-whitePrimary mt-5'>{iPaperPlane} Enviar</button>
+                <button type='submit' href="" className='inline-block bg-blackPrimary py-2 px-4 text-whitePrimary mt-5'>{iPaperPlane} {{ buttonText }}</button>
+                <div className="text-left">
+                  {showSuccessMessage && (
+                    <p className="text-green-500 font-semibold text-sm my-2">
+                      Gracias! Tu mensaje fue enviado satisfactoriamente.
+                    </p>
+                  )}
+                  {showFailureMessage && (
+                    <p className="text-red-500">
+                      Oops! Algo salió mal. Por favor, vuelva a intentarlo.
+                    </p>
+                  )}
+                </div>
               </form>
             </div>
           </div>
