@@ -69,7 +69,7 @@ export default function Contacto() {
       setShowFailureMessage(false);
       setButtonText("Enviar");
     }
-    console.log(fullname, email, subject, message);
+    console.log(nombresCompleto, email, asunto, mensaje);
   };
 
   const handleValidation = () => {
